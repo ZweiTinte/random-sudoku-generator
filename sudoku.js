@@ -10,17 +10,7 @@ let sudoku = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0],
 ];
 
-let sudoku2 = [
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-];
+let sudoku2 = JSON.parse(JSON.stringify(sudoku));
 
 let changesMade = false;
 let fields = [];
@@ -156,8 +146,6 @@ function generateRandomSudoku(numbers) {
           numbersDone++;
         }
         //alert("" + numbersDone);
-      } else {
-        continue;
       }
     }
     sudoku = JSON.parse(JSON.stringify(sudoku3));
